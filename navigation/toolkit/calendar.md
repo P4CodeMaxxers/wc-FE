@@ -1,6 +1,6 @@
 ---
 title: Calendar
-permalink: /DBS2-Frontend/calendar
+permalink: /wc-FE/calendar
 layout: openaesthetic
 active_tab: calendar
 ---

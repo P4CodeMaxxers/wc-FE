@@ -3,7 +3,7 @@
  * Uses JWT token in sessionStorage for cross-origin auth (cookies often blocked)
  */
 
-export const baseurl = "/DBS2-Frontend";
+export const baseurl = "/wc-FE";
 
 // Key for JWT storage - must match backend JWT_TOKEN_NAME (jwt_python_flask)
 export const JWT_TOKEN_KEY = 'jwt_python_flask';
