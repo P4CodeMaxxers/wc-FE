@@ -17,7 +17,6 @@ show_reading_time: false
     --pwc-rose-dark: #a25d6e;
     --pwc-rose-light: #f2dce2;
     --pwc-warm: #c9a070;
-    --pwc-warm-light: #f5ede4;
     --pwc-charcoal: #342e30;
     --pwc-text: #504a4c;
     --pwc-muted: #928a8c;
@@ -25,374 +24,261 @@ show_reading_time: false
     --pwc-white: #ffffff;
   }
 
-  /* ── Hero ── */
   .pwc-hero {
-    position: relative;
-    padding: 5rem 2rem 4rem;
+    padding: 4rem 2rem 3rem;
     text-align: center;
     background: linear-gradient(135deg, var(--pwc-sage-light) 0%, var(--pwc-cream) 40%, var(--pwc-rose-light) 100%);
-    border-bottom: 3px solid var(--pwc-warm);
-    overflow: hidden;
-  }
-
-  .pwc-hero::before {
-    content: '';
-    position: absolute;
-    top: -60px;
-    right: -60px;
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    background: rgba(122, 142, 107, 0.1);
-    pointer-events: none;
-  }
-
-  .pwc-hero::after {
-    content: '';
-    position: absolute;
-    bottom: -40px;
-    left: -40px;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: rgba(196, 120, 138, 0.09);
-    pointer-events: none;
-  }
-
-  .pwc-hero-badge {
-    display: inline-block;
-    padding: 0.3rem 1rem;
-    background: var(--pwc-sage);
-    color: var(--pwc-white);
-    border-radius: 999px;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 1.25rem;
-    animation: fadeDown 0.6s ease both;
+    border-bottom: 2px solid var(--pwc-border);
   }
 
   .pwc-hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
+    font-size: 2.6rem;
     font-weight: 700;
     color: var(--pwc-charcoal);
-    line-height: 1.15;
-    margin-bottom: 1rem;
-    animation: fadeDown 0.6s 0.1s ease both;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
   }
 
-  .pwc-hero h1 em {
-    color: var(--pwc-rose);
-    font-style: italic;
-  }
-
-  .pwc-hero-sub {
+  .pwc-hero p {
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 300;
+    font-size: 1.05rem;
+    font-weight: 400;
     color: var(--pwc-text);
-    max-width: 560px;
-    margin: 0 auto 2rem;
-    line-height: 1.65;
-    animation: fadeDown 0.6s 0.2s ease both;
+    max-width: 520px;
+    margin: 0 auto 1.75rem;
+    line-height: 1.6;
   }
 
-  .pwc-hero-actions {
+  .pwc-hero-links {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.75rem;
     flex-wrap: wrap;
-    animation: fadeDown 0.6s 0.3s ease both;
   }
 
   .pwc-btn {
     display: inline-block;
-    padding: 0.75rem 1.8rem;
-    border-radius: 8px;
+    padding: 0.65rem 1.5rem;
+    border-radius: 6px;
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 700;
+    font-size: 0.88rem;
+    font-weight: 600;
     text-decoration: none;
-    transition: all 0.25s ease;
-    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
   }
 
-  .pwc-btn-primary {
-    background: linear-gradient(135deg, var(--pwc-sage) 0%, var(--pwc-rose) 100%);
+  .pwc-btn-fill {
+    background: linear-gradient(135deg, var(--pwc-sage), var(--pwc-rose));
     color: var(--pwc-white);
-    border: 2px solid transparent;
+    border: none;
   }
 
-  .pwc-btn-primary:hover {
-    background: linear-gradient(135deg, var(--pwc-sage-dark) 0%, var(--pwc-rose-dark) 100%);
-    border-color: transparent;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(160,120,120,0.3);
+  .pwc-btn-fill:hover {
+    background: linear-gradient(135deg, var(--pwc-sage-dark), var(--pwc-rose-dark));
   }
 
-  .pwc-btn-outline {
-    background: transparent;
+  .pwc-btn-border {
+    background: none;
     color: var(--pwc-rose-dark);
-    border: 2px solid var(--pwc-rose);
+    border: 1.5px solid var(--pwc-rose);
   }
 
-  .pwc-btn-outline:hover {
+  .pwc-btn-border:hover {
     background: var(--pwc-rose);
     color: var(--pwc-white);
-    transform: translateY(-2px);
   }
 
-  /* ── Sections ── */
   .pwc-section {
-    padding: 3.5rem 2rem;
-    max-width: 960px;
+    padding: 3rem 2rem;
+    max-width: 860px;
     margin: 0 auto;
-  }
-
-  .pwc-section-label {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--pwc-sage);
-    margin-bottom: 0.5rem;
   }
 
   .pwc-section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: var(--pwc-charcoal);
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    margin-bottom: 0.75rem;
   }
 
   .pwc-section p {
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--pwc-text);
-    line-height: 1.75;
-    margin-bottom: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
   }
 
-  .pwc-divider {
-    width: 50px;
-    height: 3px;
+  .pwc-rule {
+    width: 40px;
+    height: 2px;
     background: var(--pwc-warm);
     border: none;
-    margin: 0 0 2rem;
-    border-radius: 2px;
+    margin: 0 0 1.5rem;
   }
 
-  /* ── Card Grid ── */
+  .pwc-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
+  .pwc-fact {
+    text-align: center;
+    padding: 1rem 0.75rem;
+    background: var(--pwc-cream);
+    border: 1px solid var(--pwc-border);
+    border-radius: 8px;
+  }
+
+  .pwc-fact strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--pwc-charcoal);
+  }
+
+  .pwc-fact span {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.75rem;
+    color: var(--pwc-muted);
+  }
+
   .pwc-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.25rem;
   }
 
   .pwc-card {
     background: var(--pwc-white);
     border: 1px solid var(--pwc-border);
-    border-radius: 10px;
-    padding: 1.5rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .pwc-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-  }
-
-  .pwc-card-icon {
-    font-size: 1.8rem;
-    margin-bottom: 0.75rem;
+    border-radius: 8px;
+    padding: 1.25rem;
   }
 
   .pwc-card h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     color: var(--pwc-charcoal);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
   }
 
   .pwc-card p {
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     color: var(--pwc-muted);
-    line-height: 1.6;
+    line-height: 1.55;
     margin: 0;
   }
 
-  /* ── Quick Facts ── */
-  .pwc-facts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-    margin-top: 1.5rem;
-  }
-
-  .pwc-fact {
-    text-align: center;
-    padding: 1.25rem 1rem;
-    background: var(--pwc-sage-light);
-    border-radius: 10px;
-  }
-
-  .pwc-fact-value {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--pwc-sage-dark);
-    display: block;
-  }
-
-  .pwc-fact-label {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 0.78rem;
-    color: var(--pwc-text);
-    margin-top: 0.25rem;
-    display: block;
-  }
-
-  /* ── CTA Banner ── */
   .pwc-cta {
-    background: linear-gradient(135deg, var(--pwc-sage) 0%, var(--pwc-rose) 100%);
-    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--pwc-sage), var(--pwc-rose));
+    padding: 2.5rem 2rem;
     text-align: center;
-    border-radius: 12px;
-    margin: 2rem auto;
-    max-width: 960px;
+    border-radius: 8px;
+    margin: 1.5rem auto;
+    max-width: 860px;
   }
 
   .pwc-cta h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--pwc-white);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
   }
 
   .pwc-cta p {
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: rgba(255,255,255,0.85);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .pwc-btn-white {
     background: var(--pwc-white);
     color: var(--pwc-sage-dark);
-    border: 2px solid var(--pwc-white);
+    border: none;
   }
 
   .pwc-btn-white:hover {
-    background: transparent;
-    color: var(--pwc-white);
-    transform: translateY(-2px);
+    background: rgba(255,255,255,0.85);
   }
 
-  /* ── Animations ── */
-  @keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-12px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ── Dark mode overrides (Minima dark skin) ── */
   @media (prefers-color-scheme: dark) {
-    .pwc-hero { background: linear-gradient(135deg, #252e22 0%, #1e1a1b 40%, #2e2228 100%); border-color: var(--pwc-warm); }
-    .pwc-hero h1 { color: #eae8e6; }
-    .pwc-hero-sub { color: #b8b2b4; }
-    .pwc-section h2 { color: #eae8e6; }
-    .pwc-section p { color: #b8b2b4; }
+    .pwc-hero { background: linear-gradient(135deg, #252e22 0%, #1e1a1b 40%, #2e2228 100%); border-color: #3a3438; }
+    .pwc-hero h1, .pwc-section h2, .pwc-card h3, .pwc-fact strong { color: #eae8e6; }
+    .pwc-hero p, .pwc-section p, .pwc-fact span { color: #b8b2b4; }
     .pwc-card { background: #26242a; border-color: #3a3438; }
-    .pwc-card h3 { color: #eae6e8; }
     .pwc-card p { color: #9a9498; }
-    .pwc-fact { background: linear-gradient(135deg, #2a3025 0%, #302428 100%); }
-    .pwc-fact-value { color: var(--pwc-rose-light); }
-    .pwc-fact-label { color: #b8b2b4; }
-    .pwc-btn-outline { color: var(--pwc-rose-light); border-color: var(--pwc-rose-light); }
-    .pwc-btn-outline:hover { background: var(--pwc-rose-light); color: var(--pwc-charcoal); }
+    .pwc-fact { background: #222; border-color: #3a3438; }
+    .pwc-btn-border { color: var(--pwc-rose-light); border-color: var(--pwc-rose-light); }
+    .pwc-btn-border:hover { background: var(--pwc-rose-light); color: var(--pwc-charcoal); }
   }
 </style>
 
-<!-- ════════ HERO ════════ -->
 <div class="pwc-hero">
-  <div class="pwc-hero-badge">Serving Poway Since 1960</div>
-  <h1>Poway Woman's <em>Club</em></h1>
-  <p class="pwc-hero-sub">
-    A nonprofit community of women dedicated to scholarships, the arts, civic engagement, and making Poway a better place to live.
-  </p>
-  <div class="pwc-hero-actions">
-    <a href="{{ site.baseurl }}/navigation/about" class="pwc-btn pwc-btn-primary">Learn About Us</a>
-    <a href="{{ site.baseurl }}/navigation/events" class="pwc-btn pwc-btn-outline">Upcoming Events</a>
+  <h1>Poway Woman's Club</h1>
+  <p>A nonprofit service organization in Poway, California. Since 1960, our members have supported local scholarships, the arts, civic programs, and youth leadership.</p>
+  <div class="pwc-hero-links">
+    <a href="{{ site.baseurl }}/navigation/about" class="pwc-btn pwc-btn-fill">About Us</a>
+    <a href="{{ site.baseurl }}/navigation/events" class="pwc-btn pwc-btn-border">Events</a>
   </div>
 </div>
 
-<!-- ════════ QUICK FACTS ════════ -->
 <div class="pwc-section">
-  <div class="pwc-section-label">At a Glance</div>
-  <h2>65 Years of Community Service</h2>
-  <hr class="pwc-divider">
+  <h2>At a Glance</h2>
+  <hr class="pwc-rule">
   <div class="pwc-facts">
     <div class="pwc-fact">
-      <span class="pwc-fact-value">1960</span>
-      <span class="pwc-fact-label">Founded</span>
+      <strong>1960</strong>
+      <span>Founded</span>
     </div>
     <div class="pwc-fact">
-      <span class="pwc-fact-value">501(c)(3)</span>
-      <span class="pwc-fact-label">Nonprofit Status</span>
+      <strong>501(c)(3)</strong>
+      <span>Nonprofit</span>
     </div>
     <div class="pwc-fact">
-      <span class="pwc-fact-value">GFWC</span>
-      <span class="pwc-fact-label">International Affiliation</span>
+      <strong>GFWC</strong>
+      <span>International Affiliate</span>
     </div>
     <div class="pwc-fact">
-      <span class="pwc-fact-value">2nd Tue</span>
-      <span class="pwc-fact-label">Monthly Meetings, Sept–June</span>
+      <strong>2nd Tue</strong>
+      <span>Monthly, Sept–June</span>
     </div>
   </div>
 </div>
 
-<!-- ════════ WHAT WE DO ════════ -->
 <div class="pwc-section">
-  <div class="pwc-section-label">What We Do</div>
-  <h2>Building a Stronger Poway</h2>
-  <hr class="pwc-divider">
-  <p>
-    The Poway Woman's Club supports local organizations, awards scholarships to students at four area high schools, sponsors art exhibits, and champions youth leadership — all through the volunteer spirit of its members.
-  </p>
+  <h2>What We Do</h2>
+  <hr class="pwc-rule">
+  <p>We support local organizations, award scholarships to students at four Poway-area high schools, sponsor art exhibits, and encourage youth leadership through volunteer work and community partnerships.</p>
   <div class="pwc-cards">
     <div class="pwc-card">
-      <div class="pwc-card-icon">🎓</div>
       <h3>Scholarships</h3>
-      <p>HOBY Youth Leadership awards to Poway, Mt. Carmel, Rancho Bernardo, and Westview High students, plus continuing education scholarships.</p>
+      <p>Hugh O'Brian Youth Leadership awards for Poway, Mt. Carmel, Rancho Bernardo, and Westview High School students. Continuing education scholarships through Abraxas.</p>
     </div>
     <div class="pwc-card">
-      <div class="pwc-card-icon">🎨</div>
-      <h3>Arts &amp; Culture</h3>
-      <p>"Celebrate Women" Art Exhibit, Student Art Exhibit, and Theatre in the Park bring creative energy to the community year-round.</p>
+      <h3>Arts and Culture</h3>
+      <p>"Celebrate Women" Art Exhibit, Student Art Exhibit, and Theatre in the Park — community events we sponsor throughout the year.</p>
     </div>
     <div class="pwc-card">
-      <div class="pwc-card-icon">📚</div>
-      <h3>Library &amp; Civic</h3>
-      <p>Adopted the Poway Community Library, supporting staff, programs, and the Friends of the Poway Library initiative.</p>
+      <h3>Library and Civic Support</h3>
+      <p>We adopted the Poway Community Library and support its staff and programs. We're also active with the Friends of the Poway Library.</p>
     </div>
     <div class="pwc-card">
-      <div class="pwc-card-icon">🤝</div>
       <h3>Community Partners</h3>
-      <p>Active members of Old Poway Park Action Committee, PowPAC, Poway Historical Society, and the Weingart Senior Center.</p>
+      <p>Members of Old Poway Park Action Committee, PowPAC community theatre, Poway Historical Society, and the Weingart Senior Center.</p>
     </div>
   </div>
 </div>
 
-<!-- ════════ CTA ════════ -->
 <div class="pwc-cta">
-  <h2>Ready to Make a Difference?</h2>
-  <p>Join a community of women who are building friendships, supporting local causes, and shaping the future of Poway.</p>
-  <a href="{{ site.baseurl }}/navigation/contact" class="pwc-btn pwc-btn-white">Get In Touch</a>
+  <h2>Interested in Joining?</h2>
+  <p>Come to a meeting — visitors are always welcome. No RSVP needed.</p>
+  <a href="{{ site.baseurl }}/navigation/contact" class="pwc-btn pwc-btn-white">Contact Us</a>
 </div>
